@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>POkemons</title>
+</head>
+<body>
+    <h1>Pokemons</h1>
+    <nav class="links"></nav>
+    <main class="grid-fluid">
+        
+    </main>
+
+
+    <script>
+
+        const d = document;
+
+        $main = d.querySelector("main");
+        $links = d.querySelector(".links");
+
+        let pokeAPI = "https://pokeapi.co/api/v2/pokemon";
+
+        async function loadPokemons(url){
+            try {
+                $main.innerHTML = `<img src="assets/uploader.svg" alt="Cargando..." >`;
+            } catch (err) {
+                
+            }
+        }
+
+        d.addEventListener("DOMContentLoaded", e => loadPokemons(pokeAPI))
+
+
+    </script>
+</body>
+</html>
